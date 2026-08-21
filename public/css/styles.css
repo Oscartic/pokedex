@@ -1,0 +1,12 @@
+html, body {
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+}
