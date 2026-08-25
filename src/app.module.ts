@@ -14,7 +14,7 @@ import { SeedModule } from './seed/seed.module';
     MongooseModule.forRoot('mongodb://localhost/nest-pokedex'),
     PokemonModule,
     CommonModule,
-    SeedModule
+    SeedModule,
   ],
 })
 export class AppModule {}
