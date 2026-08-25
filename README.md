@@ -16,6 +16,10 @@ npm i -g @nestjs/cli
 ````
 docker-compose up -d 
 ````
+5. fell db seeds
+`````
+http://localhost:3000/api/v2/pokemon (only for develop)
+`````
 
 # Stack 
 * MongoDB
