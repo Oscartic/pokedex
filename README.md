@@ -16,7 +16,13 @@ npm i -g @nestjs/cli
 ````
 docker-compose up -d 
 ````
-5. fell db seeds
+5. Clone ```__.env.template__``` and rename de file like a ```__.env__```
+6. feel the env variables 
+7. run application with dev environment:
+`````
+npm run start:dev
+`````
+8. fell db seeds
 `````
 http://localhost:3000/api/v2/pokemon (only for develop)
 `````

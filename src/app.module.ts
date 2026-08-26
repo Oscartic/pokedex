@@ -1,5 +1,8 @@
 import { join } from 'path';
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { EnvConfiguration } from './common/config/app.config';
+import { JoiValidationSchema } from './common/config/joi.validation';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { PokemonModule } from './pokemon/pokemon.module';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -8,10 +11,18 @@ import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      load: [EnvConfiguration],
+      validationSchema: JoiValidationSchema,
+      envFilePath: '.env',
+      isGlobal: true,
+    }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
-    MongooseModule.forRoot('mongodb://localhost/nest-pokedex'),
+    MongooseModule.forRoot(process.env.MONGO_DB!, {
+      dbName: 'pokemondb',
+    }),
     PokemonModule,
     CommonModule,
     SeedModule,
