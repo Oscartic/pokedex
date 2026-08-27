@@ -45,6 +45,11 @@ docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
 `````
 
+* PROD=> Render
+````
+https://pokedex-4lrx.onrender.com
+`````
+
 
   
 
