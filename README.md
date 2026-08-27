@@ -31,4 +31,23 @@ http://localhost:3000/api/v2/pokemon (only for develop)
 * MongoDB
 * Nest
 
+# Productions build 
+1. Create ```.env.prod``` file
+2. Feel var environment prod
+3. Create new image with command:
+````
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+`````
+
+* Remember: if you want to lift the container next time, you need use: 
+
+````
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+`````
+
+
+  
+
+
+
 
